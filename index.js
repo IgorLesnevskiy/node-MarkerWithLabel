@@ -287,6 +287,9 @@ module.exports = function(gMapsApi) {
       gMapsApi.event.addListener(this.marker_, "position_changed", function () {
         me.setPosition();
       }),
+       gMapsApi.event.addListener(this.marker_, "bounds_changed", function () {
+        me.setPosition();
+      }),
       gMapsApi.event.addListener(this.marker_, "zindex_changed", function () {
         me.setZIndex();
       }),
